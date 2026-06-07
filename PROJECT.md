@@ -1,4 +1,4 @@
-﻿# Globale Codex Skill-Bibliothek
+# Globale Codex Skill-Bibliothek
 
 Stand: 2026-06-07
 
@@ -21,6 +21,7 @@ Fuer neue Chats zuerst `CODEX_START.md` lesen. Diese `PROJECT.md` beschreibt den
 - Repo-Struktur: Welche Dateien versioniert werden
 - Skill-Bibliothek: Wie die globalen Skills projektuebergreifend genutzt werden
 - Automatische Learning Updates: Wann Skills aktualisiert werden
+- Aktualisierte Dateien: Welche Dateien bei welchen Aenderungen gepflegt werden
 - Sync-Workflow: Wie Skills aktualisiert und gepusht werden
 - Projektstandard: Welche Dateien neue Projekt-Repos bekommen
 - Ausschluesse: Was nicht committed wird
@@ -91,6 +92,13 @@ Vorgehen bei globalen Learnings:
 5. Secret-Scan ausfuehren.
 6. Committen und nach GitHub pushen.
 
+## Aktualisierte Dateien
+
+- Skill-Dateien unter `C:\Users\Anwender\.codex\skills`: aktualisieren, wenn ein wiederverwendbares Learning entsteht.
+- Kopien unter `skills/`: nach jeder kanonischen Skill-Aenderung synchronisieren.
+- `PROJECT.md`: aktualisieren, wenn sich Struktur, Regeln, Sync-Workflow, Skill-Bestand oder globales Betriebsmodell aendern.
+- `CODEX_START.md`: nur aktualisieren, wenn der schnelle Einstieg nicht mehr stimmt.
+- `README.md`: nur aktualisieren, wenn sich die Repo-Erklaerung fuer Menschen aendert.
 ## Sync-Workflow
 
 1. Aenderungen an globalen Skills in `C:\Users\Anwender\.codex\skills` pflegen.
