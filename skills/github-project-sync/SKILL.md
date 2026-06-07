@@ -1,4 +1,4 @@
-﻿---
+---
 name: github-project-sync
 description: Use when setting up, syncing, documenting, or pushing project-status repositories to GitHub for Tobias Winkler. Establishes the default GitHub owner, local clone root, repo structure, privacy expectations, token-light handoff files, global skill-library updates, and what to include or ignore.
 ---
@@ -83,9 +83,21 @@ The global skills repo should include `CODEX_START.md` and `PROJECT.md` so futur
 
 Include user-authored or intentionally customized skills. Exclude `.system` and plugin cache skills unless the user explicitly wants an archive copy.
 
+## Global Vs Project-Specific Skills
+
+Before updating any skill, decide the scope of the learning:
+
+- Global skill: use when the rule, workflow, preference, QA pattern, stack-detection logic, or builder/framework insight is reusable across multiple projects.
+- Project-specific skill: use when the rule depends on one client, one domain, one MCP server, one unusual tool, one local integration, or one project's architecture.
+- Project fact only: keep concrete IDs, URLs, field names, page/template IDs, backups, and one-off decisions in that project's `PROJECT.md`.
+
+Project-specific skills live in the project's own `skills/` folder and may be copied from a global skill as a starting point. Do not promote them to `codex-skills` unless they become reusable beyond that project.
+
+If a project uses a one-off tool or workflow, document it in the project-specific skill and the project `PROJECT.md`, not in the global library.
+
 ## Learning Update Rule
 
-After meaningful project work, automatically check whether something was learned that should become reusable guidance.
+After meaningful project work, automatically check whether something was learned and classify it as global, project-specific, or project fact only.
 
 Update global skills when the learning is:
 
@@ -95,17 +107,19 @@ Update global skills when the learning is:
 - a recurring user preference that should apply beyond the current project
 - a builder/framework-specific insight that belongs in an existing stack skill
 
-Keep purely project-specific facts in that project's `PROJECT.md` instead.
+Keep purely project-specific facts in that project's `PROJECT.md`. Keep project-specific workflows or one-off tool rules in that project's `skills/` folder.
 
-When updating global skills:
+When updating skills:
 
-1. Choose the narrowest existing skill that owns the topic.
-2. If no existing skill fits, create or propose a new user-authored skill.
-3. Update the canonical skill under `C:\Users\Anwender\.codex\skills` first.
-4. Copy the updated skill into `C:\Users\Anwender\Documents\GitHub\codex-skills\skills`.
-5. Update `codex-skills/CODEX_START.md` or `PROJECT.md` only when the library structure, sync rule, or global operating model changes.
-6. Run a secret scan before committing.
-7. Commit and push `codex-skills` so the laptop can pull the updated library.
+1. Decide scope first: global skill, project-specific skill, or project fact only.
+2. Choose the narrowest existing skill or project document that owns the topic.
+3. If no global skill fits but the learning is reusable, create or propose a new user-authored global skill.
+4. If the learning is project-only, update the project-specific skill under that project's `skills/` folder.
+5. For global learnings, update the canonical skill under `C:\Users\Anwender\.codex\skills` first.
+6. Copy the updated global skill into `C:\Users\Anwender\Documents\GitHub\codex-skills\skills`.
+7. Update `codex-skills/CODEX_START.md` or `PROJECT.md` only when the library structure, sync rule, scope rule, or global operating model changes.
+8. Run a secret scan before committing.
+9. Commit and push the affected repo: project repo for project-specific skill changes, `codex-skills` for global skill changes.
 
 Do not blindly append every chat detail to global skills. Distill the learning into stable, operational guidance.
 

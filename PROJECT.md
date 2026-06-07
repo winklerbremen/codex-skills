@@ -20,6 +20,7 @@ Fuer neue Chats zuerst `CODEX_START.md` lesen. Diese `PROJECT.md` beschreibt den
 - Zweck: Warum dieses Repo existiert
 - Repo-Struktur: Welche Dateien versioniert werden
 - Skill-Bibliothek: Wie die globalen Skills projektuebergreifend genutzt werden
+- Skill-Scope-Entscheidung: Wann ein Learning global, projektbezogen oder nur Projektfact ist
 - Automatische Learning Updates: Wann Skills aktualisiert werden
 - Aktualisierte Dateien: Welche Dateien bei welchen Aenderungen gepflegt werden
 - Sync-Workflow: Wie Skills aktualisiert und gepusht werden
@@ -64,9 +65,19 @@ C:\Users\Anwender\Documents\GitHub\codex-skills\skills
 
 Beim Start oder bei der Analyse eines Projekts sollen die passenden Skills anhand von Stack und Aufgabe gewaehlt werden, zum Beispiel WordPress, Etch, Bricks, Automatic.css, Core Framework, Accessibility, GitHub-Sync oder Frontend-Design.
 
+## Skill-Scope-Entscheidung
+
+Vor jeder Skill-Aktualisierung wird entschieden, wohin ein Learning gehoert:
+
+- Globaler Skill: wiederverwendbar fuer mehrere Projekte, Stacks, Builder, QA-Muster, Git-/Sync-Regeln oder dauerhafte Nutzerpraeferenzen.
+- Projektbezogener Skill: nur gueltig fuer ein Projekt, einen Kunden, eine Domain, einen MCP-Server, ein lokales Tool oder eine Spezialarchitektur.
+- Projektakte: konkrete IDs, URLs, Template-/Page-IDs, Feldnamen, Backups und einmalige Entscheidungen.
+
+Projektbezogene Skills liegen im jeweiligen Projekt-Repo unter `skills/`. Sie duerfen lokal erweitert werden, ohne automatisch in `codex-skills` aufgenommen zu werden. Erst wenn eine Regel uebertragbar wird, wird sie in einen globalen Skill destilliert.
+
 ## Automatische Learning Updates
 
-Nach sinnvoll abgeschlossenen Arbeitsbloecken soll eigenstaendig geprueft werden, ob ein neues Learning global wiederverwendbar ist.
+Nach sinnvoll abgeschlossenen Arbeitsbloecken soll eigenstaendig geprueft werden, ob ein neues Learning global wiederverwendbar, projektbezogen oder nur ein Projektfact ist.
 
 In globale Skills aufnehmen, wenn es sich handelt um:
 
@@ -96,7 +107,7 @@ Vorgehen bei globalen Learnings:
 
 - Skill-Dateien unter `C:\Users\Anwender\.codex\skills`: aktualisieren, wenn ein wiederverwendbares Learning entsteht.
 - Kopien unter `skills/`: nach jeder kanonischen Skill-Aenderung synchronisieren.
-- `PROJECT.md`: aktualisieren, wenn sich Struktur, Regeln, Sync-Workflow, Skill-Bestand oder globales Betriebsmodell aendern.
+- `PROJECT.md`: aktualisieren, wenn sich Struktur, Regeln, Sync-Workflow, Skill-Bestand, Scope-Entscheidung oder globales Betriebsmodell aendern.
 - `CODEX_START.md`: nur aktualisieren, wenn der schnelle Einstieg nicht mehr stimmt.
 - `README.md`: nur aktualisieren, wenn sich die Repo-Erklaerung fuer Menschen aendert.
 ## Sync-Workflow

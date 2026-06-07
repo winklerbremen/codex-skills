@@ -1,4 +1,4 @@
-﻿# Codex Start
+# Codex Start
 
 Stand: 2026-06-07
 
@@ -18,14 +18,15 @@ Stand: 2026-06-07
 - `.system` und Plugin-Cache-Skills bleiben ausgeschlossen.
 - Keine Secrets, Tokens, MCP-Konfigurationen oder lokalen Settings committen.
 - Aenderungen zuerst in der kanonischen Skill-Quelle pflegen, dann ins Repo kopieren und pushen.
-- Nach relevanten Learnings automatisch pruefen, ob ein globaler Skill aktualisiert werden soll.
+- Nach relevanten Learnings automatisch pruefen, ob ein globaler Skill, ein projektbezogener Skill oder nur eine Projektakte aktualisiert werden soll.
+- Projektbezogene Skill-Erweiterungen bleiben im jeweiligen Projekt-Repo, wenn sie nur ein Projekt, einen MCP-Server oder ein Spezialtool betreffen.
 
 ## Aktueller Stand
 
 - Globales Skills-Backup ist erstellt und nach GitHub gepusht.
 - `github-project-sync` definiert die Standardstruktur fuer Projekt-Repos.
 - Neue Projekt-Repos sollen `CODEX_START.md` fuer den schnellen Einstieg und `PROJECT.md` als Vollstatus enthalten.
-- Wiederverwendbare neue Erkenntnisse sollen in passende globale Skills destilliert werden, nicht nur in Projektakten.
+- Wiederverwendbare neue Erkenntnisse sollen in passende globale Skills destilliert werden; projekt-only Learnings bleiben im jeweiligen Projekt-Skill.
 
 ## Was Wird Regelmaessig Aktualisiert?
 
