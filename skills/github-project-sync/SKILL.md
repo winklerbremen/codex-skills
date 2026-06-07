@@ -1,11 +1,11 @@
 ﻿---
 name: github-project-sync
-description: Use when setting up, syncing, documenting, or pushing project-status repositories to GitHub for Tobias Winkler. Establishes the default GitHub owner, local clone root, repo structure, privacy expectations, token-light handoff files, and what to include or ignore.
+description: Use when setting up, syncing, documenting, or pushing project-status repositories to GitHub for Tobias Winkler. Establishes the default GitHub owner, local clone root, repo structure, privacy expectations, token-light handoff files, global skill-library updates, and what to include or ignore.
 ---
 
 # GitHub Project Sync
 
-Use this skill whenever the user wants to put a project status, PROJECT.md, CODEX_START.md, skills, or chat handoff material into Git/GitHub, or asks how to sync projects across devices.
+Use this skill whenever the user wants to put a project status, PROJECT.md, CODEX_START.md, skills, reusable learnings, or chat handoff material into Git/GitHub, or asks how to sync projects across devices.
 
 ## Defaults
 
@@ -57,6 +57,58 @@ skills/
 
 `skills/` stores only project-relevant skill copies. Do not duplicate every global skill into every project.
 
+## Global Skills Library
+
+`codex-skills` is a cross-project personal skill library, not a normal client/project repo. It should help future chats decide which skill workflow applies to a project based on stack, builder, design system, WordPress setup, frontend needs, accessibility needs, and sync/documentation needs.
+
+Canonical local source:
+
+```text
+C:\Users\Anwender\.codex\skills
+```
+
+Backup/sync repo:
+
+```text
+C:\Users\Anwender\Documents\GitHub\codex-skills
+```
+
+GitHub remote:
+
+```text
+https://github.com/winklerbremen/codex-skills.git
+```
+
+The global skills repo should include `CODEX_START.md` and `PROJECT.md` so future chats can understand the skill-library setup quickly.
+
+Include user-authored or intentionally customized skills. Exclude `.system` and plugin cache skills unless the user explicitly wants an archive copy.
+
+## Learning Update Rule
+
+After meaningful project work, automatically check whether something was learned that should become reusable guidance.
+
+Update global skills when the learning is:
+
+- reusable across multiple projects or clients
+- a workflow rule, safety rule, naming rule, QA pattern, stack-detection step, or sync convention
+- a correction to an existing skill workflow
+- a recurring user preference that should apply beyond the current project
+- a builder/framework-specific insight that belongs in an existing stack skill
+
+Keep purely project-specific facts in that project's `PROJECT.md` instead.
+
+When updating global skills:
+
+1. Choose the narrowest existing skill that owns the topic.
+2. If no existing skill fits, create or propose a new user-authored skill.
+3. Update the canonical skill under `C:\Users\Anwender\.codex\skills` first.
+4. Copy the updated skill into `C:\Users\Anwender\Documents\GitHub\codex-skills\skills`.
+5. Update `codex-skills/CODEX_START.md` or `PROJECT.md` only when the library structure, sync rule, or global operating model changes.
+6. Run a secret scan before committing.
+7. Commit and push `codex-skills` so the laptop can pull the updated library.
+
+Do not blindly append every chat detail to global skills. Distill the learning into stable, operational guidance.
+
 ## Ignore By Default
 
 Do not commit bulky or local-only artifacts unless the user explicitly asks:
@@ -67,24 +119,6 @@ Do not commit bulky or local-only artifacts unless the user explicitly asks:
 - local logos/assets unless specifically selected for versioning
 - secrets, tokens, credentials, MCP config, environment files
 - plugin cache skills from `.codex\plugins\cache`
-
-## Global Skills Repo
-
-For reusable personal skills, prefer a separate repo:
-
-```text
-C:\Users\Anwender\Documents\GitHub\codex-skills
-```
-
-Candidate source folder:
-
-```text
-C:\Users\Anwender\.codex\skills
-```
-
-The global skills repo should also include `CODEX_START.md` and `PROJECT.md` so future chats can understand the sync setup quickly.
-
-Include user-authored or intentionally customized skills. Exclude `.system` and plugin cache skills unless the user explicitly wants an archive copy.
 
 ## Setup Workflow
 
