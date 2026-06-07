@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bricks + Core Framework"
+  short_description: "Expert workflow for Bricks with Core Framework"
+  default_prompt: "Use $bricksbuilder-coreframework to build or edit Bricks content powered by Core Framework."

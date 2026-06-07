@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Skill"
+  short_description: "Art-directed frontend workflow for explicit use only."
+  default_prompt: "Use frontend-skill for a visually strong landing page, website, app, prototype, demo, or game UI."

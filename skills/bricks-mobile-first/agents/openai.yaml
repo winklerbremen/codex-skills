@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bricks Mobile First"
+  short_description: "Mobile-first responsive workflow for Bricks"
+  default_prompt: "Use $bricks-mobile-first to build or review a mobile-first Bricks layout."

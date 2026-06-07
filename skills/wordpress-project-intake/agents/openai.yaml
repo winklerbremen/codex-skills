@@ -1,0 +1,4 @@
+interface:
+  display_name: "WordPress Project Intake"
+  short_description: "Route WordPress work by stack and scope"
+  default_prompt: "Use $wordpress-project-intake to clarify the stack, scope, and approval boundaries before editing."

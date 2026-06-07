@@ -1,0 +1,4 @@
+interface:
+  display_name: "Semantic Accessibility"
+  short_description: "Semantic HTML and WCAG-oriented accessibility"
+  default_prompt: "Use $semantic-accessibility to review and improve semantic HTML and accessibility."

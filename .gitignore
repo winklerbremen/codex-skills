@@ -1,0 +1,21 @@
+﻿# Secrets and local config
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*token*
+*secret*
+*mcp*.json
+config.json
+settings.json
+
+# Codex/plugin generated caches
+plugins/cache/
+.codex-cache/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini

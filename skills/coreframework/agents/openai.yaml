@@ -1,0 +1,4 @@
+interface:
+  display_name: "Core Framework"
+  short_description: "Expert workflow for Core Framework design systems"
+  default_prompt: "Use $coreframework to inspect and update a WordPress/Core Framework design system."

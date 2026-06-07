@@ -1,0 +1,3 @@
+display_name: Bricks Builder + Automatic.css
+short_description: Build and edit Bricks + ACSS WordPress sites through Novamira.
+default_prompt: Use this skill when working on a Novamira-connected WordPress site whose target page or template is authored in Bricks Builder and styled with Automatic.css.

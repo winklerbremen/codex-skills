@@ -1,0 +1,4 @@
+interface:
+  display_name: "Webdesign Standards"
+  short_description: "Modern CSS, BEM, tokens, and layout standards"
+  default_prompt: "Use $webdesign-standards to design clean CSS architecture with modern standards."
